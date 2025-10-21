@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations | DEVINE DINE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <style>
+    /* General Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: grey;
+      color: #333;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+
+    p {
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    /* Reservation Section */
+    .reservation {
+      padding: 60px 20px;
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: 50px auto;
+      border-radius: 12px;
+    }
+
+    .reservation .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .reservation h2,
+    .reservation p {
+      text-align: center;
+    }
+
+    /* Form Styles */
+    .reservation-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group.full {
+      grid-column: span 2;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    /* Button */
+    .btn {
+      padding: 12px 20px;
+      background: #007bff;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .reservation-form {
+        grid-template-columns: 1fr;
+      }
+      .form-group.full {
+        grid-column: span 1;
+      }
+    }
+  </style>
+  <header>
+    <div class="container header-container">
+        <a href="index.html" class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/599/599995.png" 
+                 alt="Restaurant Logo" style="width:40px; height:40px; vertical-align:middle; margin-right:8px;">
+            DEVINE <span>DINE</span>
+        </a>
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <ul>
+                 <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Reservations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                 <li><a href="Sign Up.html">Login / Sign Up</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+    
+    <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(imagess/meat-salad-with-vegetables-table.jpg);">
+        <div class="container hero-content">
+            <h1>Reservations</h1>
+            <p>Secure your table for an unforgettable dining experience</p>
+        </div>
+    </section>
+
+    <section class="reservation">
+        <div class="container">
+            <h2 class="text-center">Book Your Table</h2>
+            <p class="text-center">For parties larger than 8 people, please contact us directly</p>
+            <form class="reservation-form">
+                <div class="form-group">
+                    <label for="res-date">Date</label>
+                    <input type="date" id="res-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="res-time">Time</label>
+                    <input type="time" id="res-time" required>
+                </div>
+                <div class="form-group">
+                    <label for="res-party">Party Size</label>
+                    <select id="res-party" required>
+                        <option value="1">1 Person</option>
+                        <option value="2">2 People</option>
+                        <option value="3">3 People</option>
+                        <option value="4">4 People</option>
+                        <option value="5">5 People</option>
+                        <option value="6">6 People</option>
+                        <option value="7">7 People</option>
+                        <option value="8">8 People</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="res-name">Full Name</label>
+                    <input type="text" id="res-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="res-email">Email</label>
+                    <input type="email" id="res-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="res-phone">Phone Number</label>
+                    <input type="tel" id="res-phone" required>
+                </div>
+                <div class="form-group full">
+                    <label for="res-special">Special Requests</label>
+                    <textarea id="res-special" rows="4"></textarea>
+                </div>
+                <div class="form-group full text-center">
+                    <button type="submit" class="btn">Confirm Reservation</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="dining-options">
+        <div class="container">
+            <h2 class="text-center">Dining Experiences</h2>
+            <div class="options-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px;">
+                <div class="option-item" style="text-align: center; padding: 30px; background-color: white; border-radius: 5px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <i class="fas fa-utensils" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 20px;"></i>
+                    <h3>A La Carte Dining</h3>
+                    <p>Enjoy our regular menu in the main dining room, available Tuesday to Sunday.</p>
+                </div>
+                <div class="option-item" style="text-align: center; padding: 30px; background-color: white; border-radius: 5px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <i class="fas fa-star" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 20px;"></i>
+                    <h3>Chef's Tasting Menu</h3>
+                    <p>An exclusive multi-course experience curated by our executive chef. Advance booking required.</p>
+                </div>
+                <div class="option-item" style="text-align: center; padding: 30px; background-color: white; border-radius: 5px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <i class="fas fa-glass-cheers" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 20px;"></i>
+                    <h3>Private Events</h3>
+                    <p>Host your special occasion in our private dining room for up to 20 guests.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">DEVINE <span>DINE</span></div>
+                    <p>Experience the finest South African cuisine in an elegant setting at DEVINE DINE. Where taste meets elegance.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="reservation.html">Reservations</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h3>Opening Hours</h3>
+<table border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><strong>Monday</strong></td>
+    <td>10:00 AM – 11:00 PM</td>
+  </tr>
+  <tr>
+    <td><strong>Tuesday</strong></td>
+    <td>10:00 AM – 11:00 PM</td>
+  </tr>
+  <tr>
+    <td><strong>Wednesday</strong></td>
+    <td>10:00 AM – 11:00 PM</td>
+  </tr>
+  <tr>
+    <td><strong>Thursday</strong></td>
+    <td>10:00 AM – 11:00 PM</td>
+  </tr>
+  <tr>
+    <td><strong>Friday</strong></td>
+    <td>10:00 AM – 11:00 PM</td>
+  </tr>
+  <tr>
+    <td><strong>Saturday</strong></td>
+    <td>10:00 AM – 11:00 PM</td>
+  </tr>
+  <tr>
+    <td><strong>Sunday</strong></td>
+    <td>11:00 AM – 3:00 PM</td>
+  </tr>
+</table>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 DEVINE DINE. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

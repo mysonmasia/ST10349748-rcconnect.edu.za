@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | Divine Dining</title>
+
+  <!-- Inline CSS -->
+  <style>
+    /* General Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+        background: #222;
+        color: #fff;
+        padding: 15px 0;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .logo span {
+        color: #c59d5f; /* gold accent */
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: #c59d5f;
+    }
+
+    .mobile-menu-btn {
+        display: none; /* Hidden for now */
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* Events Section */
+    .events {
+        text-align: center;
+        padding: 50px 20px;
+        background: #fff;
+    }
+
+    .events h1 {
+        font-size: 2.5rem;
+        color: #c59d5f;
+        margin-bottom: 20px;
+    }
+
+    .event-item {
+        background: #f1f1f1;
+        padding: 20px;
+        margin: 20px auto;
+        width: 70%;
+        border-left: 5px solid #c59d5f;
+        border-radius: 8px;
+        font-size: 1.2rem;
+    }
+
+    /* Event Images */
+    img {
+        display: block;
+        margin: 20px auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease;
+    }
+
+    img:hover {
+        transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+        background: #222;
+        color: #fff;
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 40px;
+        font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+        <a href="index.html" class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/599/599995.png" 
+                 alt="Restaurant Logo" style="width:40px; height:40px; vertical-align:middle; margin-right:8px;">
+            DEVINE <span>DINE</span>
+        </a>
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Reservations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                 <li><a href="Sign Up.html">Login / Sign Up</a></li>
+            </ul>
+        </nav>
+    </div>
+  </header>
+
+  <section class="events">
+    <h1>Upcoming Events</h1>
+    <div class="event-item">
+        <p>Join us for an evening of Mother's day, Father's day, & All day every Monday.</p>
+    </div>
+  </section>
+
+  <img src="pexels-angel-ayala-321556-28976231.jpg" alt="event 1" width="400" height="500">
+  <img src="pexels-ionela-mat-268382825-19671297.jpg" alt="event 2" width="400" height="500">
+  <img src="pexels-ionela-mat-268382825-19671313.jpg" alt="event 3" width="400" height="500">
+
+  <footer>
+    <p>&copy; 2025 Divine Dining. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEVINE DINE | Fine Dining Experience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+     <style>
+    /* General Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: grey;
+      color: #333;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+
+    p {
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    /* Reservation Section */
+    .reservation {
+      padding: 60px 20px;
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: 50px auto;
+      border-radius: 12px;
+    }
+
+    .reservation .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .reservation h2,
+    .reservation p {
+      text-align: center;
+    }
+
+    /* Form Styles */
+    .reservation-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group.full {
+      grid-column: span 2;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    /* Button */
+    .btn {
+      padding: 12px 20px;
+      background: #007bff;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .reservation-form {
+        grid-template-columns: 1fr;
+      }
+      .form-group.full {
+        grid-column: span 1;
+      }
+    }
+  </style>
+   <header>
+    <div class="container header-container">
+        <a href="index.html" class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/599/599995.png" 
+                 alt="Restaurant Logo" style="width:40px; height:40px; vertical-align:middle; margin-right:8px;">
+            DEVINE <span>DINE</span>
+        </a>
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Reservations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                 <li><a href="Sign Up.html">Login / Sign Up</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+   
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>DEVINE DINE</h1>
+            <p>Where South African Flavors Meet Elegant Dining</p>
+            <a href="reservation.html" class="btn">Book a Table</a>
+        </div>
+    </section>
+
+    
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>DEVINE DINE was born from a passion for exceptional cuisine and the rich culinary heritage of South Africa. Founded in 2010 by award-winning chef Nkateko Nobela, our restaurant brings a modern twist to traditional South African flavors.</p>
+                    <p>Located in the heart of Cape Town, DEVINE DINE offers an intimate dining experience where every dish tells a story. Our menu celebrates the diversity of South African ingredients, sourced locally from trusted farmers and producers.</p>
+                    <p>Our elegant atmosphere, impeccable service, and innovative cuisine have earned us recognition as one of South Africa's premier fine dining destinations.</p>
+                    <a href="about.html" class="btn">Learn More</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Restaurant Interior">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="menu">
+        <div class="container">
+            <h2 class="text-center">Signature Dishes</h2>
+            <div class="menu-categories">
+                <button class="menu-category-btn active">Starters</button>
+                <button class="menu-category-btn">Mains</button>
+                <button class="menu-category-btn">Desserts</button>
+                <button class="menu-category-btn">Drinks</button>
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3>Bobotie Spring Rolls</h3>
+                    <p>Crispy pastry filled with spiced minced meat, served with apricot chutney</p>
+                    <div class="menu-item-price">R95</div>
+                </div>
+                <div class="menu-item">
+                    <h3>Cape Malay Seafood Curry</h3>
+                    <p>Line fish, prawns and calamari in a fragrant coconut curry sauce</p>
+                    <div class="menu-item-price">R165</div>
+                </div>
+                <div class="menu-item">
+                    <h3>Braised Karoo Lamb</h3>
+                    <p>Slow-cooked lamb shank with root vegetables and red wine jus</p>
+                    <div class="menu-item-price">R245</div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="menu.html" class="btn">View Full Menu</a>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="reservation">
+    <div class="container">
+      <h2 class="text-center">Make a Reservation</h2>
+      <p class="text-center">Experience the DEVINE DINE difference. Book your table today.</p>
+      <form class="reservation-form">
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" id="date" required>
+        </div>
+        <div class="form-group">
+          <label for="time">Time</label>
+          <input type="time" id="time" required>
+        </div>
+        <div class="form-group">
+          <label for="party">Party Size</label>
+          <select id="party" required>
+            <option value="1">1 Person</option>
+            <option value="2">2 People</option>
+            <option value="3">3 People</option>
+            <option value="4">4 People</option>
+            <option value="5">5+ People</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group full">
+          <label for="special">Special Requests</label>
+          <textarea id="special" rows="3"></textarea>
+        </div>
+        <div class="form-group full text-center">
+          <button type="submit" class="btn">Book Now</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+    
+    <section id="gallery">
+        <div class="container">
+            <h2 class="text-center">OUR FOOD</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="imagess/005.jpeg" alt="Food Presentation">
+                </div>
+                <div class="gallery-item">
+                    <img src="imagess/006.jpeg" alt="Restaurant Ambiance">
+                </div>
+               
+                <div class="gallery-item">
+                    <img src="imagess/Pasta Main-Menu.jpg" alt="Fine Dining Experience">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="imagess/001.jpeg" alt="Fine Dining Experience">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>12 Victoria Road, Waterfront, Cape Town, 8001</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+27 21 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@devinedine.co.za</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Monday - Saturday: 10:00 AM - 11:00 PM<br>Sunday: 11:00 AM - 3:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13246.10112772569!2d18.41594036977538!3d-33.907288999999984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc67558dca66c7%3A0xfce46c260c4a9c05!2sVictoria%20%26%20Alfred%20Waterfront!5e0!3m2!1sen!2sza!4v1687281598322!5m2!1sen!2sza" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">DEVINE <span>DINE</span></div>
+                    <p>Experience the finest South African cuisine in an elegant setting at DEVINE DINE. Where taste meets elegance.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="reservation.html">Reservations</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h3>Opening Hours</h3>
+<table border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><strong>Monday</strong></td>
+    <td>10:00 AM – 11:00 PM</td>
+  </tr>
+  <tr>
+    <td><strong>Tuesday</strong></td>
+    <td>10:00 AM – 11:00 PM</td>
+  </tr>
+  <tr>
+    <td><strong>Wednesday</strong></td>
+    <td>10:00 AM – 11:00 PM</td>
+  </tr>
+  <tr>
+    <td><strong>Thursday</strong></td>
+    <td>10:00 AM – 11:00 PM</td>
+  </tr>
+  <tr>
+    <td><strong>Friday</strong></td>
+    <td>10:00 AM – 11:00 PM</td>
+  </tr>
+  <tr>
+    <td><strong>Saturday</strong></td>
+    <td>10:00 AM – 11:00 PM</td>
+  </tr>
+  <tr>
+    <td><strong>Sunday</strong></td>
+    <td>11:00 AM – 3:00 PM</td>
+  </tr>
+</table>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 DEVINE DINE. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = nav.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        
+        const categoryBtns = document.querySelectorAll('.menu-category-btn');
+        
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+            });
+        });
+        
+       
+        const dateInput = document.getElementById('date');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+    </script>
+</body>

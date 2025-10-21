@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | DEVINE DINE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <style>
+    /* General Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: grey;
+      color: #333;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+
+    p {
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    /* Reservation Section */
+    .reservation {
+      padding: 60px 20px;
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: 50px auto;
+      border-radius: 12px;
+    }
+
+    .reservation .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .reservation h2,
+    .reservation p {
+      text-align: center;
+    }
+
+    /* Form Styles */
+    .reservation-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group.full {
+      grid-column: span 2;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    /* Button */
+    .btn {
+      padding: 12px 20px;
+      background: #007bff;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .reservation-form {
+        grid-template-columns: 1fr;
+      }
+      .form-group.full {
+        grid-column: span 1;
+      }
+    }
+  </style>
+   <header>
+    <div class="container header-container">
+        <a href="index.html" class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/599/599995.png" 
+                 alt="Restaurant Logo" style="width:40px; height:40px; vertical-align:middle; margin-right:8px;">
+            DEVINE <span>DINE</span>
+        </a>
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Reservations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                 <li><a href="Sign Up.html">Login / Sign Up</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');">
+        <div class="container hero-content">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="text-center">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>12 Victoria Road, Waterfront, Cape Town, 8001</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+27 21 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@devinedine.co.za</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Monday - Saturday- 10:00 AM - 11:00 PM<br>Sunday- 11:00 AM - 3:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-concierge-bell"></i>
+                        <div>
+                            <h4>Reservations</h4>
+                            <p>Book online or call us during business hours</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="contact-name">Full Name</label>
+                            <input type="text" id="contact-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Subject</label>
+                            <input type="text" id="contact-subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="map-section">
+        <div class="container">
+            <h2 class="text-center">Find Us</h2>
+            <div class="map" style="height: 400px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13246.10112772569!2d18.41594036977538!3d-33.907288999999984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc67558dca66c7%3A0xfce46c260c4a9c05!2sVictoria%20%26%20Alfred%20Waterfront!5e0!3m2!1sen!2sza!4v1687281598322!5m2!1sen!2sza" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2 class="text-center">Frequently Asked Questions</h2>
+            <div class="faq-list" style="margin-top: 40px;">
+                <div class="faq-item" style="margin-bottom: 20px; background: white; padding: 20px; border-radius: 5px;">
+                    <h3>Do you accommodate dietary restrictions?</h3>
+                    <p>Yes, we gladly accommodate dietary restrictions and allergies. Please inform us when making your reservation, and our chefs will prepare suitable alternatives.</p>
+                </div>
+                <div class="faq-item" style="margin-bottom: 20px; background: white; padding: 20px; border-radius: 5px;">
+                    <h3>What is the dress code?</h3>
+                    <p>We recommend smart casual attire. While we don't require jackets, we ask guests to avoid beachwear, athletic wear, and flip-flops.</p>
+                </div>
+                <div class="faq-item" style="margin-bottom: 20px; background: white; padding: 20px; border-radius: 5px;">
+                    <h3>Is there parking available?</h3>
+                    <p>Valet parking is available at the restaurant entrance. Alternatively, there is paid parking at the Victoria & Alfred Waterfront parking garage.</p>
+                </div>
+                <div class="faq-item" style="margin-bottom: 20px; background: white; padding: 20px; border-radius: 5px;">
+                    <h3>Do you offer gift certificates?</h3>
+                    <p>Yes, we offer gift certificates that can be purchased in person or over the phone. They make perfect gifts for special occasions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">DEVINE <span>DINE</span></div>
+                    <p>Experience the finest South African cuisine in an elegant setting at DEVINE DINE. Where taste meets elegance.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="reservation.html">Reservations</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h3>Opening Hours</h3>
+<table border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><strong>Monday</strong></td>
+    <td>10:00 AM – 11:00 PM</td>
+  </tr>
+  <tr>
+    <td><strong>Tuesday</strong></td>
+    <td>10:00 AM – 11:00 PM</td>
+  </tr>
+  <tr>
+    <td><strong>Wednesday</strong></td>
+    <td>10:00 AM – 11:00 PM</td>
+  </tr>
+  <tr>
+    <td><strong>Thursday</strong></td>
+    <td>10:00 AM – 11:00 PM</td>
+  </tr>
+  <tr>
+    <td><strong>Friday</strong></td>
+    <td>10:00 AM – 11:00 PM</td>
+  </tr>
+  <tr>
+    <td><strong>Saturday</strong></td>
+    <td>10:00 AM – 11:00 PM</td>
+  </tr>
+  <tr>
+    <td><strong>Sunday</strong></td>
+    <td>11:00 AM – 3:00 PM</td>
+  </tr>
+</table>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 DEVINE DINE. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
